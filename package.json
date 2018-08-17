@@ -2,6 +2,14 @@
   "name": "swapple",
   "version": "1.0.0",
   "description": "A tool to toggle comments on and off",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClintonBaker/Swapple.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ClintonBaker/Swapple/issues"
+  },
+  "homepage": "https://github.com/ClintonBaker/Swapple#readme",
   "main": "dist/index.js",
   "scripts": {
     "start": "babel-node index.js",
