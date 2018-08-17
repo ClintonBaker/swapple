@@ -1,9 +1,9 @@
-// + code
+// start code
 //let some = "code";
-// -
+// end
 
-// + house
+// start house
 let some = "house";
-// -
+// end
 
 console.log(some);
