@@ -1,0 +1,32 @@
+{
+  "name": "swapple",
+  "version": "1.0.0",
+  "description": "A tool to toggle comments on and off",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "author": "Clinton Baker",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": 10
+          }
+        }
+      ]
+    ]
+  }
+}
