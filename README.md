@@ -30,6 +30,8 @@ let code = 'production';
 # end
 ```
 
+Then to toggle blocks of code on or off just use swapple!
+
 ```
 swapple test.js
 ```
