@@ -112,6 +112,7 @@ commander.option("<filePath>").action(filePath => {
     c: "//",
     "c++": "//",
     py: "#",
+    rb: "#",
     confd: "#"
   };
 
