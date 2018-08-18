@@ -110,7 +110,7 @@ commander.option("<filePath>").action(filePath => {
     js: "//",
     java: "//",
     c: "//",
-    "c++": "//",
+    cpp: "//",
     py: "#",
     rb: "#",
     confd: "#"
