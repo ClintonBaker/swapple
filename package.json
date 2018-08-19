@@ -13,7 +13,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "build": "babel ./index.js --out-dir ./dist",
+    "build": "babel ./src --out-dir ./dist",
     "test": "jest"
   },
   "author": "Clinton Baker",
@@ -30,6 +30,7 @@
     "@babel/core": "^7.0.0-rc.1",
     "@babel/node": "^7.0.0-rc.1",
     "@babel/preset-env": "^7.0.0-rc.1",
+    "babel-core": "^7.0.0-bridge.0",
     "jest": "^23.5.0"
   },
   "babel": {
