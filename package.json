@@ -12,7 +12,7 @@
   "homepage": "https://github.com/ClintonBaker/Swapple#readme",
   "main": "dist/index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "babel-node ./src",
     "build": "babel ./src --out-dir ./dist",
     "test": "jest"
   },
@@ -22,6 +22,7 @@
     "swapple": "./dist/index.js"
   },
   "dependencies": {
+    "@babel/preset-flow": "^7.0.0-rc.1",
     "commander": "^2.17.1",
     "inquirer": "^6.1.0"
   },
@@ -35,6 +36,7 @@
   },
   "babel": {
     "presets": [
+      "@babel/preset-flow",
       [
         "@babel/preset-env",
         {
