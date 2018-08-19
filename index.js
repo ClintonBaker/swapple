@@ -113,10 +113,15 @@ commander.option("<filePath>").action(filePath => {
     cpp: "//",
     py: "#",
     rb: "#",
-    confd: "#"
+    conf: "#"
   };
 
-  swapple(commentType[fileType], filePath);
+  commentType[fileType]
+    ? swapple(commentType[fileType], filePath)
+    : console.log(
+        "I'm terribly sorry, but that file type is not supported." +
+          "\nBut feel free to make a request for support at https://github.com/ClintonBaker/Swapple"
+      );
 });
 
 commander.parse(process.argv);

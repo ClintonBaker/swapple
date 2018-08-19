@@ -1,11 +1,11 @@
 # Swapple
 
-A cli tool for toggling blocks of code on or off.
+A cli tool for toggling blocks of code on or off using comments.
 
 ## Installation
 
 ```
-sudo npm i -g swapple
+npm i -g swapple
 ```
 
 ## Usage
@@ -47,5 +47,5 @@ swapple ./path/to/my/file.js
 ```
 npm i
 npm run build
-sudo i -g ./
+npm i -g ./
 ```
