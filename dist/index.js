@@ -99,28 +99,12 @@ _commander.default.option("<filePath>").action(filePath => {
     js: "//",
     java: "//",
     c: "//",
-    "c++": "//",
+    cpp: "//",
     py: "#",
-    confd: "#"
+    rb: "#",
+    conf: "#"
   };
-  swapple(commentType[fileType], filePath);
+  commentType[fileType] ? swapple(commentType[fileType], filePath) : console.log("I'm terribly sorry, but that file type is not supported." + "\nBut feel free to make a request for support at https://github.com/ClintonBaker/Swapple");
 });
 
-_commander.default.parse(process.argv); // Yo, man! This is intense! =D
-// Do your thang, man. This is good shit.
-// I'll see if I can get through it lol. I should have it ready
-// By tomorrow.
-// Hehehe. 0.0.0, mang. Nothing is ready until 1.0.0!
-// There are weird things that will happen with publishing.
-// Just wanna see to it that we get the name reserved and such.
-// Or you can handle it :) You got this under control!
-// No, lol. Just for publishing. :)
-// Basically, our file is found at /etc/apache2/http.confd
-// Yeah, and the comments start with "#".
-// And it asks us for password to save the file
-// and again to run sudo apachectl restart.
-// https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e
-// https://medium.freecodecamp.org/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78
-// Good luck creating this for Mac users without having a mac! =P
-// Yeppers!
-// Looks legit! Let's go ahead and publish 0.0.0, yeah?
+_commander.default.parse(process.argv);
