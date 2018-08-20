@@ -57,7 +57,14 @@ const findCodeChunks = (file, commentType) => {
   return chunks;
 };
 
-const swap = (page, chunks, commentType) => {
+type ChunkT = {
+  name: string,
+  start: number,
+  end: number,
+  turnedOn: boolean
+}
+
+export const swap = (page: string[], chunks: ChunkT[], commentType: string) => {
   chunks.forEach(chunk => {
     if (chunk.turnedOn) {
       if (page[chunk.start + 1].indexOf(commentType) >= 0) {
