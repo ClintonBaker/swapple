@@ -12,8 +12,9 @@
   "homepage": "https://github.com/ClintonBaker/Swapple#readme",
   "main": "dist/index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "build": "babel ./index.js --out-dir ./dist"
+    "start": "babel-node ./src",
+    "build": "babel ./src --out-dir ./dist",
+    "test": "jest"
   },
   "author": "Clinton Baker",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "swapple": "./dist/index.js"
   },
   "dependencies": {
+    "@babel/preset-flow": "^7.0.0-rc.1",
     "commander": "^2.17.1",
     "inquirer": "^6.1.0"
   },
@@ -28,10 +30,13 @@
     "@babel/cli": "^7.0.0-rc.1",
     "@babel/core": "^7.0.0-rc.1",
     "@babel/node": "^7.0.0-rc.1",
-    "@babel/preset-env": "^7.0.0-rc.1"
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^23.5.0"
   },
   "babel": {
     "presets": [
+      "@babel/preset-flow",
       [
         "@babel/preset-env",
         {
