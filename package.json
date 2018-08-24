@@ -14,7 +14,8 @@
   "scripts": {
     "start": "babel-node ./src",
     "build": "babel ./src --out-dir ./dist",
-    "test": "jest"
+    "swapple": "node ./dist",
+    "test": "jest --verbose test"
   },
   "author": "Clinton Baker",
   "license": "ISC",
@@ -22,7 +23,6 @@
     "swapple": "./dist/index.js"
   },
   "dependencies": {
-    "@babel/preset-flow": "^7.0.0-rc.1",
     "commander": "^2.17.1",
     "inquirer": "^6.1.0"
   },
@@ -31,8 +31,26 @@
     "@babel/core": "^7.0.0-rc.1",
     "@babel/node": "^7.0.0-rc.1",
     "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-flow": "^7.0.0-rc.1",
     "babel-core": "^7.0.0-bridge.0",
     "jest": "^23.5.0"
+  },
+  "jest": {
+    "automock": false,
+    "browser": false,
+    "verbose": false,
+    "silent": true,
+    "testMatch": [
+      "**/_tests/*.test.js"
+    ],
+    "setupFiles": [],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "babel": {
     "presets": [
@@ -40,6 +58,7 @@
       [
         "@babel/preset-env",
         {
+          "modules": "commonjs",
           "targets": {
             "node": 10
           }
