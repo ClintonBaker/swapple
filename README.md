@@ -1,51 +1,63 @@
-# Swapple
+# swapple
 
-A cli tool for toggling blocks of code on or off using comments.
+Interactive CLI menu to toggle commented portions of files.
 
-## Installation
+## Usage
+
+**Install.**
 
 ```
 npm i -g swapple
 ```
 
-## Usage
+**Create toggle-able sections of your file.**
 
-Wrap the blocks of code you want to make swappable with a comment
-followed by start blockName and then end it with a comment and the keyword
-end.
-
-### Example
+For example, here is a mock part of an Apache `httpd.conf` file using swapple comments to allow swapple to handle toggling for us.
 
 ```
-// start Production
-let code = 'production';
-// end
+# swapple start foo
+ProxyPass /foo https://foo.com/
+ProxyPassReverse /foo https://foo.com/
+# swapple end
+
+# swapple start bar
+# ProxyPass /bar https://bar.com/
+# ProxyPassReverse /bar https://bar.com/
+# swapple end
 ```
 
-or
+**Use swapple to toggle sections on and off.**
 
 ```
-# start Production
-let code = 'production';
-# end
+swapple <path-to-your-file>
 ```
 
-Then to toggle blocks of code on or off just use swapple!
+![gif of swapple in use](swappleexample.gif)
+
+**Expect to find your file properly swapple'd.**
 
 ```
-swapple test.js
-```
+# swapple start foo
+# ProxyPass /foo https://foo.com/
+# ProxyPassReverse /foo https://foo.com/
+# swapple end
 
-or
-
-```
-swapple ./path/to/my/file.js
+# swapple start bar
+ProxyPass /bar https://bar.com/
+ProxyPassReverse /bar https://bar.com/
+# swapple end
 ```
 
 ## Development
 
+**Build**
+
 ```
-npm i
 npm run build
-npm i -g ./
+```
+
+**Test**
+
+```
+npm t
 ```

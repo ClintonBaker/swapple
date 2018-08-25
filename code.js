@@ -1,5 +1,5 @@
 // swapple start code
-//let some = "code";
+let some = "code";
 // swapple end
 
 // swapple start hello
